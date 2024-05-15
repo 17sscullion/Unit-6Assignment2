@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Hot Beans Web" content="Web Development">
+    <meta name="Web Development; Hot Beans Web; Hot Beans; Website Development" content="Web Development">
+    <meta name="author" content="S R Scullion Smith">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Beans Web</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body>
+
+<script>
+function emailisvalid(email) {
+    return /^[^s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+	
+function formValidation() {
+    let fname = document.forms["Apply"]["firstname"].value;
+	if (fname == "") {
+	   alert("First Name Field Must Be filled Out");
+	   return false;
+	}
+    let lname = document.forms["Apply"]["lastname"].value;
+	if (lname == "") {
+	   alert("Last Name Field Must Be filled Out");
+	   return false;
+	}
+    let dob = document.forms["Apply"]["dateofbirth"].value;
+	if (dob == "") {
+	   alert("Date Of Birth Field Must Be filled Out");
+	   return false;
+	}
+    let job = document.forms["Apply"]["job"].value;
+	if (job == "") {
+	   alert("Job Field Must Be filled Out");
+	   return false;
+	}
+    let email = document.forms["Apply"]["email"].value;
+	if (email == "") {
+	   alert("Email Field Must Be filled Out");
+	   return false;
+	}
+	if (emailisvalid(email)==false) {
+	   alert("Email Format Is Incorrect");
+	   return false;
+	}
+	
+	return true;
+}
+</script>
+
+<nav>
+    <img src="Hot Beans Logo.png" alt="Logo" width="130" height="130" class="center-image">
+    <a href="About-Us.html">Home/About Us</a>
+    <a href="Meet-The-Team.html">Meet The Team</a>
+    <a href="Job-Specifacations.html">Job Specifications</a>
+    <a href="Apply.html">Applications</a>
+    <a href="Web-Dev-Courses.html">Web Development Courses</a>
+    <div class="search-container">
+        <form>
+            <input type="text" placeholder="Search...">
+            <button type="submit">GO</button>
+        </form>
+    </div>
+</nav>
+
+    <div class="container2">
+    <h1>Applications</h1>
+    <p>Looking to work for us here at Hot Beans Web, APPLY BELOW!</p>
+<form
+  action="https://formspree.io/f/xbjnwvev" name="Apply"
+  method="POST" onsubmit="return formValidation()" 
+  style="margin: 30px;"
+>
+  <label>
+    First Name:
+    <input type="first name:" name="firstname">
+  </label>
+  <label>
+    Last Name:
+    <input type="last name:" name="lastname">
+  </label>
+  <div
+  style="margin: 10px;"
+  </div>
+  <br>
+  <label>
+    Date Of Birth:
+    <input type="date of birth:" name="dateofbirth">
+  </label>
+  <label>
+    Job Your Applying For:
+    <input type="job:" name="job">
+  </label>
+  <div
+  style="margin: 10px;"
+  </div>
+  <br>
+  <label>
+    Email:
+    <input type="email:" name="email">
+  </label>
+  <div
+  style="margin: 10px;"
+  </div>
+  <br>
+  <button type="submit" style="background-color: #008000; color: white;">Send</button>
+  <div
+  style="margin: 30px;"
+  </div>
+</form>
+
+	<div class="help-box">
+    <a href="Web-Dev-Courses.html">Web Dev Courses</a>
+    </div>
+	<div class="help-box">
+    <a href="Job-Specifacations.html">Job Specifacations</a>
+    </div>
+	
+    <div class="bottom-nav">
+    <img src="Instagram.png" alt="Instagram" width="25" height="25">
+    <a href="https://www.instagram.com">Instagram</a> 
+    <img src="Facebook.png" alt="Facebook" width="25" height="25">
+    <a href="https://www.facebook.com">Facebook</a> 
+    <img src="LinkedIn.png" alt="LinkedIn" width="25" height="25">
+    <a href="https://uk.linkedin.com">LinkedIn</a>
+    </div>
+
+</body>
+</html>
+
+
+  
+   
