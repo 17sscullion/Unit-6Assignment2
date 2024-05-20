@@ -238,3 +238,8 @@ nav a:hover {
     text-align: center;
     background-color: #596e79;
 }
+
+.send{
+    height:40px;
+    width:95px;
+}
